@@ -1,0 +1,355 @@
+/* Estilos para o menu de navegação: */
+
+.header-container {
+  background-color: #1a1a1a;
+  width: 100%;
+  height: 12%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+header .navbar a {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+header .navbar ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header .navbar li {
+  display: inline;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 1%;
+  text-decoration: none;
+}
+
+.menu-li:hover {
+  background-color: #06335e;
+  border-radius: 8px;
+}
+
+/* Estilos para Dropdowns */
+.menu-li .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1a1a1a;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+  min-width: 150px;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.menu-li:hover .dropdown-content {
+  display: block;
+}
+
+.menu-li .dropdown-content a {
+  display: block;
+  color: #cccccc;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.menu-li .dropdown-content a:hover {
+  background-color: #06335e;
+  color: #cccccc;
+}
+
+/* Estilos para o corpo do site: */
+
+body {
+  background-color: black;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #cccccc;
+}
+
+.cad-body {
+  display:block;
+  margin-top: 8.2%;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #cccccc;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.title-container {
+  text-align: center;
+  margin-top: 10%;
+  position: relative;
+}
+
+.box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.table-container {
+  margin-top: 10%;
+  font-size: small;
+}
+
+table {
+  width: 95%;
+  border-collapse: collapse;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #333;
+}
+
+thead {
+  background-color: #272727;
+}
+
+td, th {
+  padding: 10px;
+  border: 1px solid #333;
+}
+
+th:hover {
+  background-color: #333;
+}
+
+tr:hover {
+  background-color: #1a1a1a;
+}
+
+button[type="submit"][name="btn_alt"][value="ok"], 
+button[type="submit"][name="btn_del"][value="ok"] {
+  font-size: small;
+  width: 75px;
+  height: 33px;
+}
+
+.show-box {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  color: #cccccc;
+  max-width: 200px; /* Largura máxima para telas desktop e de tablets */
+  
+}
+
+.cad-container {
+  position:relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  font-size:90%;
+  background-color: #1a1a1a;
+  padding: 10px;
+  border-radius: 5px;
+  color: #cccccc;
+  width: 400px;
+  height: 293px;
+  margin: auto;
+  max-width: 600px; /* Largura máxima para telas desktop e de tablets */
+}
+
+.cad-container2 {
+  position:relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  font-size:90%;
+  background-color: #1a1a1a;
+  padding: 10px;
+  border-radius: 5px;
+  color: #cccccc;
+  width: 400px;
+  height: 260px;
+  margin: auto;
+  max-width: 600px; /* Largura máxima para telas desktop e de tablets */
+}
+
+.title-box {
+  width: 480px;
+  height: 415px;
+  padding-top: 1.5%;
+  border-radius: 5px;
+  margin: auto;
+  background-color: #1a1a1a;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input, button {
+  border-radius: 5px;
+  text-align: center;
+  width: 170px;
+  padding: 8px;
+  border: 1px solid #1a1a1a;
+  font-size: 14px;
+}
+
+input, select {
+  margin-bottom: 5%;
+}
+
+button {
+  background-color: #06335e;
+  color: #cccccc;
+  cursor: pointer;
+  width: 189px;
+  height: 35px;
+  margin-top: px;
+}
+
+button:hover {
+  background-color: #030630;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+input[type="email"]::placeholder {
+  color: #999; /* desired color for the placeholder text */
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-size: 14px;
+}
+
+select {
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  color: #999;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Optional: Style the dropdown arrow */
+select:after {
+  content: '\25BC';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+/* Optional: Style the dropdown options */
+select option {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background-color: white;
+  color: #333;
+}
+
+select#gen,#pln,#tmp, option {
+  color: black;
+}
+
+.middle-container {
+  background-image: url("../images/evologo1.jpeg");
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+  width: 95%;
+  height: 465px;
+  margin: auto auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Estilos para o rodapé do site: */
+
+footer {
+  background-color: #1a1a1a;
+  position:fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 12%;
+  z-index: 2;
+  font-size: medium;
+}
+
+footer p {
+  text-align: center;
+  margin: 0;
+  padding-top: 3px;
+  font-size: small;
+}
+
+.footer-sm {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding-top: 5px;
+  margin-left: 42%;
+  margin-right: 42%;
+}
+
+footer button {
+  border-radius: 8px;
+  cursor: pointer;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 25px;
+  height: 25px;
+}
+
+.facebook-btn {
+  background-image: url("../images/facebook-1.png");
+}
+
+.facebook-btn:hover{
+  background-image: url("../images/facebook-2.png");
+}
+
+.instagram-btn {
+  background-image: url("../images/instagram-1.png");
+}
+
+.instagram-btn:hover {
+  background-image: url("../images/instagram-2.png");
+}
+
+.whatsapp-btn {
+  background-image: url("../images/whatsapp-1.png");
+}
+
+.whatsapp-btn:hover {
+  background-image: url("../images/whatsapp-2.png");
+}
+
+footer hr {
+  margin-left: 8%;
+  margin-right: 8%;
+  border: 1px solid #333;
+}
