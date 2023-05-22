@@ -4,83 +4,81 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cadastro de usuário (admin)</title>
+        <title>Evo45 - Solicitação de acesso admin.</title>
         <link rel="stylesheet" href="../css/evo45styles.css">
     </head>
     <body>
         <div class="header-container">
-			<header>
+        <header>
 				<div class="navbar">
 					<ul>
-						<li class="menu-li"><a href="index.html">Home</a></li>
+						<li class="menu-li"><a href="../html/index.html">Home</a></li>
 						<li class="menu-li">
 							Alunos
 							<div class="dropdown-content">
-								<a href="../php/alunos_lista.php">Listar Alunos</a>
-								<a href="./aluno_cad.html">Cadastrar Aluno(a)</a>
+								<a href="./alunos_lista.php">Listar Alunos</a>
+								<a href="../html/aluno_cad.html">Cadastrar Aluno(a)</a>
 							</div>
 						</li>
 						
 						<li class="menu-li">
 							Colaboradores
 							<div class="dropdown-content">
-								<a href="../php/colabs_lista.php">Listar Colaboradores</a>
-								<a href="./colab_cad.html">Cadastrar Colaborador(a)</a>
+								<a href="./colabs_lista.php">Listar Colaboradores</a>
+								<a href="../html/colab_cad.html">Cadastrar Colaborador(a)</a>
 							</div>
 						</li>
 						
 						<li class="menu-li">
 							Planos
 							<div class="dropdown-content">
-								<a href="../php/planos_lista.php">Listar planos</a>
-								<a href="./plano_cad.html">Cadastrar plano</a>
+								<a href="./planos_lista.php">Listar planos</a>
+								<a href="../html/plano_cad.html">Cadastrar plano</a>
 							</div>
 						</li>
 						
 						<li class="menu-li">
 							Professores
 							<div class="dropdown-content">
-								<a href="../php/profes_lista.php">Listar Professores</a>
-								<a href="./profe_cad.html">Cadastrar Professor(a)</a>
+								<a href="./profes_lista.php">Listar Professores</a>
+								<a href="../html/profe_cad.html">Cadastrar Professor(a)</a>
 							</div>
 						</li>
 						
 						<li class="menu-li">
 							Administrador
 							<div class="dropdown-content">
-								<a href="./usuar_cad.html">Solicitar acesso de administrador</a>
+								<a href="../html/usuar_cad.html">Solicitar acesso de administrador</a>
 							</div>
 						</li>
 					</ul>
 				</div>
 			</header>
-		</div>
-        <div class="cad-body">
-            <div class="title-box">
-            <h2>Solicitação de acesso administrador</h2>
-			<div style="color: yellow;">&#x26A0;</div> <strong>Atenção!</strong>
-			<p>Após informar seus dados, entre em contato com o<br>administrador para receber sua autorização de acesso.</p>
-				<form method="POST" action="../php/usuar_cad.php">
-					<div>
-						<br>
-						<div class="form-column">
-							<label for="nom">Novo usuário:</label><br>
-							<input type="text" id="nom" name="nom" required placeholder="Informe o nome de usuário"><br>
-						</div>
-						<div class="form-column">
-							<label for="sen">Senha:</label><br>
-							<input type="password" id="sen" name="sen" required placeholder="Informe a senha de usuário"><br><br>
-						</div>    
-					</div>
-					<div>
-						<button class="down-button" type="submit">
-							<strong>Solicitar</strong>
-						</button>
-					</div>
-				</form>
+        </div>
+
+        <?php
+            $nom=$_POST['nom'];
+            $sen=$_POST['sen'];
+
+            $sql = "INSERT INTO usuarios(tmp,sen)
+                    VALUES ('$nom','$sen')";
+
+            $con = mysqli_connect("localhost","root","","evo45");
+
+            if (mysqli_connect_errno())
+              {  echo "Failed to connect to MySQL: " .  mysqli_connect_error();}
+            mysqli_query($con,$sql);
+            mysqli_close($con);
+        ?>
+
+        <div class="middle-container">
+            <div class="title-container">
+                <h2>Solicitação enviada com sucesso!</h2>
+				<p>Entre em contato com o administrador.</p>
             </div>
         </div>
-		<!-- Rodapé -->
+
+        <!-- Rodapé -->
         <footer>
 			<!-- Evo45 Logo + ícones de redes sociais. -->
 			<div class="footer-sm">

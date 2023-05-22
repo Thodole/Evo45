@@ -78,6 +78,7 @@
 		   		</thead>
 		       	<?php
 		       		while($row = mysqli_fetch_array($result)){
+						$val = $row['val'];
 				?>
 					<tr style="text-align: center">
 						<td><?php echo $row['nom']; ?></td>

@@ -76,7 +76,6 @@
 		   			<th>E-mail</th>
 		   			<th>Plano</th>
 		   			<th>Periodicidade</th>
-		   			<th colspan="2"></th>
 		   		</thead>
 		       	<?php
 		       		while($row = mysqli_fetch_array($result)){

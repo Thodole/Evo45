@@ -66,7 +66,7 @@
             $sal=$_POST['sal'];
             $fad=$_POST['fad'];
 
-            $sql = "INSERT INTO colaboradores(cpf,nom,gen,idd,tel,ema,sal,fad)
+            $sql = "INSERT INTO professores(cpf,nom,gen,idd,tel,ema,sal,fad)
                     VALUES ('$cpf','$nom','$gen','$idd','$tel','$ema','$sal','$fad')";
 
             $con = mysqli_connect("localhost","root","","evo45");
