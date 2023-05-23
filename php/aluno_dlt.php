@@ -73,7 +73,7 @@
 
 		<div class="box-container">
 			<div class="show-box">
-			  <h2>Cadastro deletado!</h2>
+			  <h2>Cadastro de aluno(a) deletado!</h2>
 			</div>
 	  </div>
 

@@ -57,17 +57,17 @@
 		</div>
 
 		<?php
-	      	 $id=$_POST['id'];                
-	      	$cpf=$_POST['cpf'];                
-	      	$nom=$_POST['nom'];		
-	     	$gen=$_POST['gen'];               
-	     	$idd=$_POST['idd'];		
-	     	$tel=$_POST['tel'];               
-	     	$ema=$_POST['ema'];                
-	     	$pln=$_POST['pln'];		  
-	     	$tmp=$_POST['tmp'];		  
-	       	$sql="UPDATE alunos
-	       		  SET id='$id',cpf='$cpf',nom='$nom',gen='$gen',idd='$idd',tel='$tel',ema='$ema',pln='$pln',tmp='$tmp'
+	      	 $id=$_POST['id'];
+	      	$cpf=$_POST['cpf'];
+	      	$nom=$_POST['nom'];
+	     	$gen=$_POST['gen'];
+	     	$idd=$_POST['idd'];
+	     	$tel=$_POST['tel'];
+	     	$ema=$_POST['ema'];
+	     	$sal=$_POST['sal'];
+	     	$fad=$_POST['fad'];
+	       	$sql="UPDATE professores
+	       		  SET id='$id',cpf='$cpf',nom='$nom',gen='$gen',idd='$idd',tel='$tel',ema='$ema',sal='$sal',fad='$fad'
 	       		  WHERE ID='$id'";
 	       	$con=mysqli_connect("127.0.0.1","root","","evo45");
 
@@ -81,7 +81,7 @@
 
 		<div class="box-container">
 			<div class="show-box">
-			  <h2>Cadastro de aluno(a) atualizado!</h2>
+			  <h2>Cadastro de professor(a) atualizado!</h2>
 			</div>
 	  </div>
 

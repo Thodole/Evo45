@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Evo45 - Cadastro alterado</title>
+		<title>Evo45 - Cadastro deletado</title>
 		<link rel="stylesheet" href="../css/evo45styles.css">
 	</head>
 	<body>
@@ -56,32 +56,24 @@
 			</header>
 		</div>
 
-		<?php
-	      	 $id=$_POST['id'];                
-	      	$cpf=$_POST['cpf'];                
-	      	$nom=$_POST['nom'];		
-	     	$gen=$_POST['gen'];               
-	     	$idd=$_POST['idd'];		
-	     	$tel=$_POST['tel'];               
-	     	$ema=$_POST['ema'];                
-	     	$pln=$_POST['pln'];		  
-	     	$tmp=$_POST['tmp'];		  
-	       	$sql="UPDATE alunos
-	       		  SET id='$id',cpf='$cpf',nom='$nom',gen='$gen',idd='$idd',tel='$tel',ema='$ema',pln='$pln',tmp='$tmp'
-	       		  WHERE ID='$id'";
-	       	$con=mysqli_connect("127.0.0.1","root","","evo45");
-
-			if (mysqli_connect_errno())	{
-				echo "Failed to connect to MySQL: " . mysqli_connect_error();
-			}
-
+		<?php 
+            $id=$_POST['id'];
+            $sql="DELETE FROM professores WHERE ID='$id'";
+            
+			$con=mysqli_connect("127.0.0.1", "root", "", "evo45");
+            
+			if (mysqli_connect_errno()) {
+                echo "Falha de Conexão com o MySQL: ", mysqli_connect_error();
+            }
+            
 			mysqli_query($con, $sql);
-        
+            
+            mysqli_close($con);
         ?>
 
 		<div class="box-container">
 			<div class="show-box">
-			  <h2>Cadastro de aluno(a) atualizado!</h2>
+			  <h2>Cadastro de professor(a) deletado!</h2>
 			</div>
 	  </div>
 
