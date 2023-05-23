@@ -83,15 +83,27 @@
 					<tr style="text-align: center">
 						<td><?php echo $row['nom']; ?></td>
 						<td><?php echo $row['val']; ?></td>
-						<td><?php echo $val-($val*($row['dvm']/100)); ?></td>
-			            <td><?php echo $val-($val*($row['dvt']/100)); ?></td>
-			            <td><?php echo $val-($val*($row['dvs']/100)); ?></td>
-				        <td><?php echo $val-($val*($row['dva']/100)); ?></td>
+						<td><?php
+								/* number_format accepts the 1st parameter as a number, and 2nd is a decimal after zero */
+								echo number_format(
+										($val-(
+											// desconto em porcentagem mensal
+											$val*(
+												$row['dvm']!= 0? $row['dvm']/100: 0
+											)
+										)
+									)/12, 2
+								);
+							?></td>
+
+			            <td><?php echo number_format(($val-($val*($row['dvt']/100)))/12, 2); ?></td>
+			            <td><?php echo number_format(($val-($val*($row['dvs']/100)))/12, 2); ?></td>
+				        <td><?php echo number_format(($val-($val*($row['dva']/100)))/12, 2); ?></td>
 						<td>
-							<form action="./plano_alt.php" method="POST">
-								<input type="hidden" name="nom" value="
+							<form action="./plano_form_alt.php" method="POST">
+								<input type="hidden" name="id" value="
                                     <?php
-                                        echo $row["nom"];
+                                        echo $row["ID"];
                                     ?>"/>
 								
                                 <button type="submit" name="btn_alt" value="ok">
@@ -101,9 +113,9 @@
 						</td>
                         <td>
 							<form action="./plano_dlt.php" method="POST">
-								<input type="hidden" name="nom" value="
+								<input type="hidden" name="id" value="
                                     <?php
-                                        echo $row["nom"];
+                                        echo $row["ID"];
                                     ?>"/>
 								
                                 <button type="submit" name="btn_del" value="ok">

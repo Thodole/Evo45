@@ -64,7 +64,7 @@
 				echo "Failed to connect to MySQL: " . mysqli_connect_error();
 			}
 
-			$stmt = mysqli_prepare($con, "SELECT * FROM alunos WHERE id = ?");
+			$stmt = mysqli_prepare($con, "SELECT * FROM alunos WHERE ID = ?");
 			mysqli_stmt_bind_param($stmt, "s", $id);
 			mysqli_stmt_execute($stmt);
 
