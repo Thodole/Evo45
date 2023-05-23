@@ -91,10 +91,10 @@
 				        <td><?php echo $row['sal']; ?></td>
 				        <td><?php echo $row['fun']; ?></td>
 						<td>
-							<form action="./colab_alt.php" method="POST">
-								<input type="hidden" name="cpf" value="
+							<form action="./colab_form_alt.php" method="POST">
+								<input type="hidden" name="id" value="
                                     <?php
-                                        echo $row["cpf"];
+                                        echo $row["ID"];
                                     ?>"/>
 								
                                 <button type="submit" name="btn_alt" value="ok">
@@ -104,9 +104,9 @@
 						</td>
                         <td>
 							<form action="./colab_dlt.php" method="POST">
-								<input type="hidden" name="cpf" value="
+								<input type="hidden" name="id" value="
                                     <?php
-                                        echo $row["cpf"];
+                                        echo $row["ID"];
                                     ?>"/>
 								
                                 <button type="submit" name="btn_del" value="ok">

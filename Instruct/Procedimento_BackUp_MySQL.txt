@@ -1,0 +1,20 @@
+cd C:\xampp\mysql\bin
+
+mysqldump -u root -p -c --databases evo45 > C:\xampp\htdocs\thodole\evo45\sql\evo45.sql
+
+Procedimento para fazer Back-Up do banco de dados
+Para fazer Back-Up do banco de dados no MySQL é necessário que esteja no “cmd”
+dentro da pasta “bin” que pertence a pasta “mysql”. Caso não esteja, faça o procedimento
+para acessar a pasta “bin”. Estando dentro desta pasta, siga o procedimento a seguir:
+1 - Digite o seguinte comando e pressione a tecla ENTER:
+mysqldump -u root -p -c --databases nome do banco > F:\nome do back up.sql
+Obs.: A letra “F” representa a unidade do pen drive. Utilize a unidade que desejar. Foi só um
+exemplo! Não finalizamos o comando com ponto e vírgula, pois não estamos dentro do
+MySQL.
+2 – Após digitar o comando, será solicitado a senha para acessar o MySQL e realizar o
+procedimento de back-up. A senha é a do MySQL, pois temos que acessá-lo para que o
+programa faça o back-up do banco de dados que desejamos. Digite a senha e pressione a tecla
+ENTER.
+3 – Após ter digitado a senha, o programa faz o back-up em alguns segundos e retorna ao
+prompt de comando dentro da pasta “bin”. A partir deste momento o back-up foi realizado e
+está salvo na unidade especificada.
