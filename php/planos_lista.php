@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="header-container">
-        <header>
+        	<header>
 				<div class="navbar">
 					<ul>
 						<li class="menu-li"><a href="../html/index.html">Home</a></li>

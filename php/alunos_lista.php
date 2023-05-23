@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="header-container">
-        <header>
+        	<header>
 				<div class="navbar">
 					<ul>
 						<li class="menu-li"><a href="../html/index.html">Home</a></li>
@@ -90,11 +90,8 @@
 				        <td><?php echo $row['pln']; ?></td>
 				        <td><?php echo $row['tmp']; ?></td>
 						<td>
-							<form action="./aluno_alt.php" method="POST">
-								<input type="hidden" name="cpf" value="
-                                    <?php
-                                        echo $row["cpf"];
-                                    ?>"/>
+							<form action="./aluno_form_alt.php" method="POST">
+								<input type="hidden" name="id" value="<?php echo $row["ID"]; ?>"/>
 								
                                 <button type="submit" name="btn_alt" value="ok">
                                     Alterar
@@ -103,10 +100,7 @@
 						</td>
                         <td>
 							<form action="./aluno_dlt.php" method="POST">
-								<input type="hidden" name="cpf" value="
-                                    <?php
-                                        echo $row["cpf"];
-                                    ?>"/>
+								<input type="hidden" name="id" value="<?php echo $row["ID"]; ?>"/>
 								
                                 <button type="submit" name="btn_del" value="ok">
                                     Deletar
