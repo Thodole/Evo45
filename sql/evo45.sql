@@ -129,7 +129,7 @@ CREATE TABLE `professores` (
   `sal` double NOT NULL,
   `fad` varchar(25) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -138,7 +138,6 @@ CREATE TABLE `professores` (
 
 LOCK TABLES `professores` WRITE;
 /*!40000 ALTER TABLE `professores` DISABLE KEYS */;
-INSERT INTO `professores` (`ID`, `cpf`, `nom`, `gen`, `idd`, `tel`, `ema`, `sal`, `fad`) VALUES (1,'123.456.789-01','Glauber Luis','masculino',36,'(61) 98128-6338','gurauberu@gmail.com',2346.5,'ambas');
 /*!40000 ALTER TABLE `professores` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -177,4 +176,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-23  8:30:13
+-- Dump completed on 2023-05-23 22:13:01
