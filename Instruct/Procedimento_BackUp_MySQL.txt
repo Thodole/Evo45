@@ -1,6 +1,7 @@
 cd C:\xampp\mysql\bin
 
 mysqldump -u root -p -c --databases evo45 > C:\xampp\htdocs\thodole\evo45\sql\evo45.sql
+mysqldump -u root -p -c --databases projetojava3a > C:\xampp\htdocs\thodole\evo45\sql\projetojava3a.sql
 
 Procedimento para fazer Back-Up do banco de dados
 Para fazer Back-Up do banco de dados no MySQL é necessário que esteja no “cmd”
