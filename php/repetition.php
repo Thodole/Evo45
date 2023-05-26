@@ -17,8 +17,8 @@
                     <li class=\"menu-li\">
                         Alunos
                         <div class=\"dropdown-content\">
-                            <a href=\"../php/alunos_lista.php\">Listar Alunos</a>
-                            <a href=\"../html/aluno_cad.html\">Cadastrar Aluno(a)</a>
+                            <a href=\"./alunos_lista.php\">Listar Alunos</a>
+                            <a href=\"./aluno_form_cad.php\">Cadastrar Aluno(a)</a>
                         </div>
                     </li>
 

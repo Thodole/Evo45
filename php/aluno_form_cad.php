@@ -1,64 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cadastro de aluno(a)</title>
-        <link rel="stylesheet" href="../css/evo45styles.css">
+        <?php
+            $title="Cadastro de aluno(a)";
+            include 'repetition.php';
+            echo $head;
+        ?>
     </head>
     <body>
-        <div class="header-container">
-			<header>
-				<div class="navbar">
-					<ul>
-						<li class="menu-li"><a href="index.html">Home</a></li>
-						<li class="menu-li">
-							Alunos
-							<div class="dropdown-content">
-								<a href="../php/alunos_lista.php">Listar Alunos</a>
-								<a href="./aluno_cad.html">Cadastrar Aluno(a)</a>
-							</div>
-						</li>
-						
-						<li class="menu-li">
-							Colaboradores
-							<div class="dropdown-content">
-								<a href="../php/colabs_lista.php">Listar Colaboradores</a>
-								<a href="./colab_cad.html">Cadastrar Colaborador(a)</a>
-							</div>
-						</li>
-						
-						<li class="menu-li">
-							Planos
-							<div class="dropdown-content">
-								<a href="../php/planos_lista.php">Listar planos</a>
-								<a href="./plano_cad.html">Cadastrar plano</a>
-							</div>
-						</li>
-						
-						<li class="menu-li">
-							Professores
-							<div class="dropdown-content">
-								<a href="../php/profes_lista.php">Listar Professores</a>
-								<a href="./profe_cad.html">Cadastrar Professor(a)</a>
-							</div>
-						</li>
-						
-						<li class="menu-li">
-							Administrador
-							<div class="dropdown-content">
-								<a href="./usuar_cad.html">Solicitar acesso de administrador</a>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</header>
-		</div>
+        <?php
+            echo $header;    
+        ?>
         <div class="cad-body">
             <div class="title-box">
             <h2>Cadastro de Aluno(a)</h2>
-				<form method="POST" action="../php/aluno_done_cad.php">
+				<form method="POST" action="./aluno_done_cad.php">
 					<div class="cad-container">
 						<div class="form-column">
 							<label for="cpf">CPF:</label><br>
@@ -118,26 +74,6 @@
 				</form>
             </div>
         </div>
-		<!-- Rodapé -->
-        <footer>
-			<!-- Evo45 Logo + ícones de redes sociais. -->
-			<div class="footer-sm">
-				Siga-nos:
-					<a href="https://facebook.com" target="_blank">
-						<button class="facebook-btn"></button>
-					</a>
-					<a href="https://instagram.com" target="_blank">
-						<button class="instagram-btn"></button>
-					</a>
-					<a href="https://whatsapp.com" target="_blank">
-						<button class="whatsapp-btn"></button>
-					</a>
-			</div>
-			<hr>
-			<div>
-				<p>© 2023 evo45 - Todos os direitos reservados. &nbsp; / &nbsp; 
-                   DF-495 - Santa Maria, Brasília - Distrito Federal.</p>
-			</div>
-		</footer>
+		<?php echo $footer;?>
     </body>
 </html>

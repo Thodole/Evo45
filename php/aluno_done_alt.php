@@ -57,15 +57,15 @@
 		</div>
 
 		<?php
-	      	 $id=$_POST['id'];                
-	      	$cpf=$_POST['cpf'];                
-	      	$nom=$_POST['nom'];		
-	     	$gen=$_POST['gen'];               
-	     	$idd=$_POST['idd'];		
-	     	$tel=$_POST['tel'];               
-	     	$ema=$_POST['ema'];                
-	     	$pln=$_POST['pln'];		  
-	     	$tmp=$_POST['tmp'];		  
+	      	 $id=$_POST['id'];
+	      	$cpf=$_POST['cpf'];
+	      	$nom=$_POST['nom'];
+	     	$gen=$_POST['gen'];
+	     	$idd=$_POST['idd'];
+	     	$tel=$_POST['tel'];
+	     	$ema=$_POST['ema'];
+	     	$pln=$_POST['pln'];
+	     	$tmp=$_POST['tmp'];
 	       	$sql="UPDATE alunos
 	       		  SET id='$id',cpf='$cpf',nom='$nom',gen='$gen',idd='$idd',tel='$tel',ema='$ema',pln='$pln',tmp='$tmp'
 	       		  WHERE ID='$id'";

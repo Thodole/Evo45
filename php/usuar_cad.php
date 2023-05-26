@@ -59,7 +59,7 @@
         <?php
             $nom=$_POST['nom'];
             $sen=$_POST['sen'];
-			$search_sql = "SELECT * FROM usuarios WHERE usu='$nom'";
+			$search_sql = "SELECT * FROM usuarios WHERE usu='$nom' OR tmp='$nom'";
 			$insert_sql = "INSERT INTO usuarios(tmp,sen) VALUES ('$nom','$sen')";
 
 			$con = mysqli_connect("localhost","root","","evo45");

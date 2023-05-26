@@ -137,6 +137,7 @@ tr:hover {
 
 button[type="submit"][name="btn_alt"][value="ok"], 
 button[type="submit"][name="btn_del"][value="ok"] {
+  margin: auto;
   font-size: small;
   width: 75px;
   height: 33px;
@@ -222,7 +223,6 @@ button {
   cursor: pointer;
   width: 189px;
   height: 35px;
-  margin-top: 25px;
 }
 
 button:hover {
