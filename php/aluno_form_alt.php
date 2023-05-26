@@ -73,7 +73,7 @@
 						</div>    
 					</div>
 					<div>
-						<button class="down-button" type="submit">Cadastrar</button> <?php } ?>
+						<button class="down-button" type="submit">Atualizar</button> <?php } ?>
 					</div>
 				</form>
 			</div>

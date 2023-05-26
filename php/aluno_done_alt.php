@@ -20,10 +20,11 @@
 	     	$pln=$_POST['pln'];
 	     	$tmp=$_POST['tmp'];
 	       	$sql="UPDATE alunos
-	       		  SET id='$id',cpf='$cpf',nom='$nom',gen='$gen',idd='$idd',tel='$tel',ema='$ema',pln='$pln',tmp='$tmp' WHERE ID='$id'";
+				SET id='$id',cpf='$cpf',nom='$nom',gen='$gen',idd='$idd',tel='$tel',ema='$ema',pln='$pln',tmp='$tmp' WHERE ID='$id'";
 	       	$con=mysqli_connect("127.0.0.1","root","","evo45");
 			if (mysqli_connect_errno())	{
 				echo "Failed to connect to MySQL: " . mysqli_connect_error();
+				die();
 			}
 			mysqli_query($con, $sql);
         ?>
