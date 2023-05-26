@@ -9,7 +9,7 @@
 	// Exibe mensagem de falha, se não houver conexão com o banco de dados
 	if (mysqli_connect_errno()) {
 		echo "Failed to connect to MySQL: " .  mysqli_connect_error();
-		exit();
+		die();
 	}
 
 	// Prepara e executa a query (SQL) que verifica se os dados estão corretos

@@ -14,6 +14,7 @@
 			$con=mysqli_connect("localhost","root","","evo45"); 
 			if (mysqli_connect_errno()) {
 				echo "Failed to connect to MySQL: " . mysqli_connect_error();
+				die();
 			}
 			$stmt = mysqli_prepare($con, "SELECT * FROM alunos WHERE ID = ?");
 			mysqli_stmt_bind_param($stmt, "s", $id);

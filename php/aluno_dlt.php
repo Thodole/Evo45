@@ -15,6 +15,7 @@
 			$con=mysqli_connect("127.0.0.1", "root", "", "evo45");
 			if (mysqli_connect_errno()) {
                 echo "Falha de Conexão com o MySQL: ", mysqli_connect_error();
+				die();
             }
 			mysqli_query($con, $sql);
             mysqli_close($con);

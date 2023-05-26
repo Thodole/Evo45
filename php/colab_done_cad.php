@@ -20,8 +20,10 @@
             $fun=$_POST['fun'];
             $sql = "INSERT INTO colaboradores(cpf,nom,gen,idd,tel,ema,sal,fun) VALUES ('$cpf','$nom','$gen','$idd','$tel','$ema','$sal','$fun')";
             $con = mysqli_connect("localhost","root","","evo45");
-            if (mysqli_connect_errno())
-              {  echo "Failed to connect to MySQL: " .  mysqli_connect_error();}
+            if (mysqli_connect_errno()) {
+                echo "Failed to connect to MySQL: " .  mysqli_connect_error();
+                die();
+            }
             mysqli_query($con,$sql);
             mysqli_close($con);
         ?>

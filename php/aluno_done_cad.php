@@ -20,8 +20,10 @@
             $tmp=$_POST['tmp'];
             $sql = "INSERT INTO alunos(cpf,nom,gen,idd,tel,ema,pln,tmp) VALUES ('$cpf','$nom','$gen','$idd','$tel','$ema','$pln','$tmp')";
             $con = mysqli_connect("localhost","root","","evo45");
-            if (mysqli_connect_errno())
-              {  echo "Failed to connect to MySQL: " .  mysqli_connect_error();}
+            if (mysqli_connect_errno()) {
+                echo "Failed to connect to MySQL: " .  mysqli_connect_error();
+                die();
+            }
             mysqli_query($con,$sql);
             mysqli_close($con);
         ?>
