@@ -16,6 +16,7 @@
 			// Exibe mensagem de falha, se não houver conexão com o banco de dados
 			if (mysqli_connect_errno()) {
 				echo "Failed to connect to MySQL: " .  mysqli_connect_error();
+				exit();
 			}
 
 	        // Prepara e executa a query (SQL) que verifica se os dados estão corretos
@@ -28,7 +29,7 @@
 			if (mysqli_num_rows($result) > 0) {
 				
 				// Autenticação bem-sucedida - redireciona para a página 'index.html'
-				header("Location: ../html/index.html");
+				header("Location: ./index.php");
 				
 				// Chama imediatamente a função 'exit()' para prevenir demais execuções de código.
 				exit();
