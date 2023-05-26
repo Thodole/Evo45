@@ -25,31 +25,31 @@
                     <li class=\"menu-li\">
                         Colaboradores
                         <div class=\"dropdown-content\">
-                            <a href=\"../php/colabs_lista.php\">Listar Colaboradores</a>
-                            <a href=\"../html/colab_cad.html\">Cadastrar Colaborador(a)</a>
+                            <a href=\"./colabs_lista.php\">Listar Colaboradores</a>
+                            <a href=\"./colab_form_cad.php\">Cadastrar Colaborador(a)</a>
                         </div>
                     </li>
 
                     <li class=\"menu-li\">
                         Planos
                         <div class=\"dropdown-content\">
-                            <a href=\"../php/planos_lista.php\">Listar planos</a>
-                            <a href=\"../html/plano_cad.html\">Cadastrar plano</a>
+                            <a href=\"./planos_lista.php\">Listar planos</a>
+                            <a href=\"./plano_form_cad.php\">Cadastrar plano</a>
                         </div>
                     </li>
 
                     <li class=\"menu-li\">
                         Professores
                         <div class=\"dropdown-content\">
-                            <a href=\"../php/profes_lista.php\">Listar Professores</a>
-                            <a href=\"../html/profe_cad.html\">Cadastrar Professor(a)</a>
+                            <a href=\"./profes_lista.php\">Listar Professores</a>
+                            <a href=\"./profe_form_cad.php\">Cadastrar Professor(a)</a>
                         </div>
                     </li>
 
                     <li class=\"menu-li\">
                         Administrador
                         <div class=\"dropdown-content\">
-                            <a href=\"../html/usuar_cad.html\">Solicitar acesso de administrador</a>
+                            <a href=\"./usuar_form_cad.php\">Solicitar acesso de administrador</a>
                         </div>
                     </li>
                 </ul>
