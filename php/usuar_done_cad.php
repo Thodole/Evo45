@@ -12,26 +12,19 @@
         <?php
             $nom=$_POST['nom'];
             $sen=$_POST['sen'];
-			$search_sql = "SELECT * FROM usuarios WHERE usu='$nom' OR tmp='$nom'";
+            $conect_sql = mysqli_connect("localhost","root","","evo45");
 			$insert_sql = "INSERT INTO usuarios(tmp,sen) VALUES ('$nom','$sen')";
-			$con = mysqli_connect("localhost","root","","evo45");
+            $search_sql = "SELECT * FROM usuarios WHERE usu='$nom' OR tmp='$nom'";
             if (mysqli_connect_errno()) {
 				echo "Failed to connect to MySQL: " .  mysqli_connect_error();
 				die();
 			} else {
-				$result_sql = mysqli_query($con, $search_sql);
+				$result_sql = mysqli_query($conect_sql, $search_sql);
 				if (mysqli_num_rows($result_sql) > 0) {
-					echo"
-                        <div class=\"middle-container\">
-                            <div class=\"title-container\">
-                                <h2>Registro de usuário pendente!</h2>
-                                <p>Entre em contato com o administrador.</p>
-                            </div>
-                        </div>
-                    ";
+					echo $recad;
 				} else {
-					mysqli_query($con,$insert_sql);
-            		mysqli_close($con);
+					mysqli_query($conect_sql,$insert_sql);
+            		mysqli_close($conect_sql);
 				}
 			}
         ?>
