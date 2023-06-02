@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<?php
-            $title="Evo45 - Cadastro alterado";
+    <head>
+        <?php
+            $title="Aluno(a) cadastrado(a)";
             include 'repetition.php';
             echo $head;
         ?>
-	</head>
-	<body>
+    </head>
+    <body>
 		<?php echo $header;?>
-		<?php
-	      	 $id=$_POST['id'];
-	      	$cpf=$_POST['cpf'];
-	      	$nom=$_POST['nom'];
-	     	$gen=$_POST['gen'];
-	     	$idd=$_POST['idd'];
-	     	$tel=$_POST['tel'];
-	     	$ema=$_POST['ema'];
-	     	$pln=$_POST['pln'];
-	     	$tmp=$_POST['tmp'];
-	       	$sql="UPDATE alunos
-				SET id='$id',cpf='$cpf',nom='$nom',gen='$gen',idd='$idd',tel='$tel',ema='$ema',pln='$pln',tmp='$tmp' WHERE ID='$id'";
-	       	$con=mysqli_connect("127.0.0.1","root","","evo45");
-			if (mysqli_connect_errno())	{
-				echo "Failed to connect to MySQL: " . mysqli_connect_error();
-				die();
-			}
-			mysqli_query($con, $sql);
+        <?php
+            $cpf=$_POST['cpf'];
+            $nom=$_POST['nom'];
+            $gen=$_POST['gen'];
+            $idd=$_POST['idd'];
+            $tel=$_POST['tel'];
+            $ema=$_POST['ema'];
+            $pln=$_POST['pln'];
+            $tmp=$_POST['tmp'];
+            $conect_sql = mysqli_connect("localhost","root","","evo45");
+            $search_sql = "SELECT * FROM alunos WHERE cpf='$cpf' OR ema='$ema'";
+            $insert_sql = "INSERT INTO alunos(cpf,nom,gen,idd,tel,ema,pln,tmp) VALUES ('$cpf','$nom','$gen','$idd','$tel','$ema','$pln','$tmp')";
+            if (mysqli_connect_errno()) {
+                echo "Failed to connect to MySQL: " .  mysqli_connect_error();
+                die();
+            } else {
+                $result_sql = mysqli_query($conect_sql, $search_sql);
+                if (mysqli_num_rows($result_sql) > 0) {
+                    echo $recad;
+                } else {
+                    mysqli_query($conect_sql,$insert_sql);
+                    mysqli_close($conect_sql);
+                }
+            }
         ?>
-		<div class="box-container">
-			<div class="show-box"><h2>Cadastro de aluno(a) atualizado!</h2></div>
-	  	</div>
-		<?php echo $footer;?>
-	</body>
+        <div class="middle-container">
+            <div class="title-container">
+                <h2>Aluno(a) cadastrado(a) com sucesso!</h2>
+            </div>
+        </div>
+        <?php echo $footer;?>
+    </body>
 </html>
