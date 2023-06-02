@@ -79,13 +79,4 @@
         </div>
         </footer>
     ";
-
-    $recad="
-        <div class=\"middle-container\">
-        <div class=\"title-container\">
-            <h2>Cadastro já inserido!</h2>
-            <p>Consulte o administrador.</p>
-        </div>
-        </div>
-    ";
 ?>
